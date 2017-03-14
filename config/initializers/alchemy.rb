@@ -1,6 +1,13 @@
 module Alchemy
-  mattr_accessor :mount_devise_routes
+  mattr_accessor :mount_devise_routes, :devise_modules
   @@mount_devise_routes = true
+  @@devise_modules = [
+    :database_authenticatable,
+    :trackable,
+    :validatable,
+    :timeoutable,
+    :recoverable
+  ]
 end
 
 require 'alchemy/devise/ability'

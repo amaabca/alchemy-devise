@@ -1,3 +1,8 @@
+module Alchemy
+  mattr_accessor :mount_devise_routes
+  @@mount_devise_routes = true
+end
+
 require 'alchemy/devise/ability'
 
 Alchemy.register_ability(Alchemy::Devise::Ability)
